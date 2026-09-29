@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#4A5043">
+  <title>SAMAS | Al Tanour Al Reefi Digital Brochure</title>
+  <style>
+    :root{--olive:#4A5043;--cream:#EEE8DD;--gold:#B69A62;--ink:#30352E}
+    *{box-sizing:border-box}
+    body{margin:0;min-width:320px;min-height:100vh;font-family:Inter,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at top,#f8f4ed 0,var(--cream) 48%,#e3dbcc 100%)}
+    a{text-decoration:none;color:inherit}
+    .shell{min-height:100vh;display:grid;place-items:center;padding:22px 14px}
+    .card{width:min(100%,720px);background:rgba(255,255,255,.78);border:1px solid rgba(182,154,98,.45);border-radius:28px;padding:28px;box-shadow:0 24px 70px rgba(48,53,46,.13)}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{width:min(220px,55vw);height:auto;display:block}
+    .lang{border:1px solid var(--gold);background:transparent;color:var(--olive);border-radius:999px;padding:10px 15px;font-weight:700;cursor:pointer}
+    .content{padding:42px 2px 18px}.eyebrow{margin:0 0 12px;color:var(--gold);font-size:12px;letter-spacing:.17em;font-weight:800}
+    h1{font-family:Georgia,serif;font-weight:500;color:var(--olive);font-size:clamp(38px,8vw,64px);line-height:1;margin:0}
+    .arabic h1{font-family:Tahoma,Arial,sans-serif;font-weight:700}
+    .intro{font-size:17px;line-height:1.65;color:#596055;max-width:590px;margin:22px 0 0}
+    .actions{display:grid;grid-template-columns:1.35fr 1fr;gap:12px;margin-top:30px}
+    .actions a{min-height:54px;display:grid;place-items:center;padding:14px 18px;border-radius:15px;font-weight:800;text-align:center}
+    .primary{background:var(--olive);color:#fffaf1}.secondary{border:1px solid var(--gold);background:rgba(238,232,221,.65);color:var(--olive)}
+    .contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+    .contacts a{padding:16px 14px;border:1px solid rgba(74,80,67,.13);border-radius:15px;background:rgba(255,255,255,.68)}
+    .contacts span{display:block;color:#8b7650;font-size:12px;font-weight:700;margin-bottom:5px}.contacts strong{font-size:13px;color:var(--olive);overflow-wrap:anywhere}
+    .location{font-size:13px;color:#747a70;margin:18px 0 0}
+    footer{border-top:1px solid rgba(182,154,98,.32);padding-top:20px;margin-top:8px;color:#7d6844;text-align:center;font-size:11px;font-weight:800;letter-spacing:.13em}
+    footer b{color:var(--gold);margin:0 4px}
+    @media(max-width:640px){.card{padding:20px;border-radius:22px}.content{padding-top:34px}.actions,.contacts{grid-template-columns:1fr}.contacts a{display:flex;justify-content:space-between;gap:14px;align-items:center}.contacts span{margin:0}}
+  </style>
+</head>
+<body>
+<main class="shell">
+<section class="card">
+  <div class="top">
+    <img class="logo" src="assets/samas-logo.png" alt="SAMAS Trading">
+    <button class="lang" id="languageToggle" type="button">العربية</button>
+  </div>
+
+  <div class="content" id="english">
+    <p class="eyebrow">EXCLUSIVE QATAR AGENT</p>
+    <h1>Al Tanour Al Reefi</h1>
+    <p class="intro">Explore the complete SAMAS digital brochure and our full bread collection.</p>
+    <div class="actions">
+      <a class="primary" href="assets/samas-brochure.pdf" target="_blank" rel="noopener">View Full Brochure</a>
+      <a class="secondary" href="assets/samas-brochure.pdf" download>Download PDF</a>
+    </div>
+    <div class="contacts">
+      <a href="https://wa.me/97477860086" target="_blank" rel="noopener"><span>WhatsApp</span><strong>+974 77 86 00 86</strong></a>
+      <a href="tel:+97477860086"><span>Call</span><strong>+974 77 86 00 86</strong></a>
+      <a href="mailto:info@samas.qa"><span>Email</span><strong>info@samas.qa</strong></a>
+    </div>
+    <p class="location">Doha, Qatar</p>
+  </div>
+
+  <div class="content arabic" id="arabic" hidden dir="rtl" lang="ar">
+    <p class="eyebrow">الوكيل الحصري في قطر</p>
+    <h1>التنور الريفي</h1>
+    <p class="intro">تصفح كتيب ساماس الرقمي الكامل واكتشف مجموعة منتجات الخبز.</p>
+    <div class="actions">
+      <a class="primary" href="assets/samas-brochure.pdf" target="_blank" rel="noopener">عرض الكتيب الكامل</a>
+      <a class="secondary" href="assets/samas-brochure.pdf" download>تحميل PDF</a>
+    </div>
+    <div class="contacts">
+      <a href="https://wa.me/97477860086" target="_blank" rel="noopener"><span>واتساب</span><strong dir="ltr">+974 77 86 00 86</strong></a>
+      <a href="tel:+97477860086"><span>اتصال</span><strong dir="ltr">+974 77 86 00 86</strong></a>
+      <a href="mailto:info@samas.qa"><span>البريد الإلكتروني</span><strong dir="ltr">info@samas.qa</strong></a>
+    </div>
+    <p class="location">الدوحة، قطر</p>
+  </div>
+
+  <footer>QUALITY <b>•</b> TRUST <b>•</b> GROWTH</footer>
+</section>
+</main>
+<script>
+const t=document.getElementById('languageToggle'),en=document.getElementById('english'),ar=document.getElementById('arabic');
+t.addEventListener('click',()=>{const show=ar.hidden;ar.hidden=!show;en.hidden=show;t.textContent=show?'English':'العربية';document.documentElement.lang=show?'ar':'en';document.documentElement.dir=show?'rtl':'ltr'});
+</script>
+</body>
+</html>
